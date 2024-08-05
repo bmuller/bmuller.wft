@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Heading } from 'app/components/content'
 
 const Investment = ({ name, imgSrc, href }) => (
-  <a href={href} className='flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 hover:bg-sky-700 hover:text-white dark:bg-gradient-to-r from-sky-800 hover:from-sky-700'>
+  <a href={href} className='flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800 hover:bg-sky-700 hover:text-white dark:bg-gradient-to-r from-sky-900 hover:from-sky-700'>
     <Image alt={`${name} logomark`} src={imgSrc} className='!mr-2' width='30' height='30' /> {name}
   </a>
 )
@@ -41,7 +41,7 @@ export default () => (
       </div>
     </section>
     <section>
-      <div className='rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-600 dark:bg-neutral-900 mx-5 my-8'>
+      <div className='rounded border border-neutral-200 bg-neutral-50 px-4 py-4 dark:border-neutral-600 dark:bg-neutral-900 mx-0 my-8'>
         <h2 className='mb-4 text-xl'>🚀 Exits</h2>
         <div className='flex items-center justify-between'>
           <Investment name='High Snobiety' imgSrc='/logos/high-snobiety.png' href='https://www.highsnobiety.com' />
