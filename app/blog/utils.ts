@@ -7,6 +7,7 @@ type Metadata = {
   summary: string
   image?: string
   imageCredit?: string
+  imageCreditLink?: string  
 }
 
 function parseFrontmatter(fileContent: string) {
