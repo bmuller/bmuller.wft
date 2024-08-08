@@ -70,6 +70,11 @@ h1, h2 {
 }
 
 .prose pre {
+    @apply rounded-lg border border-neutral-200 dark:border-neutral-900;
+}
+
+/*
+.prose pre {
   @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
 }
 
@@ -86,6 +91,7 @@ h1, h2 {
 .prose code span {
   @apply font-medium;
 }
+*/
 
 .prose img {
   /* Don't apply styles to next/image */

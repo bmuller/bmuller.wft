@@ -1,8 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { highlight } from 'sugar-high'
 import React from 'react'
+import rehypeHighlight from 'rehype-highlight';
+import langDockerfile from 'highlight.js/lib/languages/dockerfile'
+import { all } from 'lowlight'
+
+import 'highlight.js/styles/github-dark.css'
+
+const options = {
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [
+      rehypeHighlight,
+      [ rehypeHighlight, { languages: all }]
+    ],
+  }
+}
+
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -48,11 +63,6 @@ function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 
-function Code({ children, ...props }) {
-  let codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
-}
-
 function slugify(str) {
   return str
     .toString()
@@ -95,15 +105,9 @@ let components = {
   h6: createHeading(6),
   Image: RoundedImage,
   a: CustomLink,
-  code: Code,
   Table,
 }
 
-export function CustomMDX(props) {
-  return (
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-    />
-  )
-}
+export const CustomMDX = (props) => (
+  <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} options={options} />
+)
