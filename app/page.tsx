@@ -6,11 +6,18 @@ export default () => (
     <Heading>It's Muller Time</Heading>
     <div className='prose prose-neutral dark:prose-invert'>
       <p>
-        {`My name is Brian Muller, and I'm the CTO and Co-founder of `}
+        {`My name is Brian Muller, and I'm an operator, investor, and founder with two exits.`}
+      </p>
+      <p>
+        {`Most recently, I was the CTO and Co-founder of `}
         <BadgeLink href='https://parallelmarkets.com' imgSrc='/logos/parallel.png'>
           Parallel Markets
         </BadgeLink>
-        {`. Parallel Markets provides portable investor identity and accreditation services to make investing online easier.`}
+        {` which provided portable investor identity and accreditation services to make investing online easier. Parallel Markets was acquired by `}
+        <BadgeLink href='https://icapital.com' imgSrc='/logos/icapital.png'>
+          iCapital                                                                             
+        </BadgeLink>
+        {` in early 2025.`}
       </p>
     </div>
     <div className='prose prose-neutral dark:prose-invert'>
