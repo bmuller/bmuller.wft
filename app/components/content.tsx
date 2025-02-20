@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-export const Heading = (props) => <h1 className='mb-8 text-2xl font-semibold tracking-tighter' {...props} />
+export const Heading = (props) => <h1 className='mb-6 text-2xl font-semibold tracking-tighter' {...props} />
+export const SubHeading = (props) => <h2 className='mb-6 text-xl font-semibold tracking-tighter' {...props} />
 
 const BADGE_LINK_CLASSES = 'items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 !no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 hover:bg-sky-700 hover:text-white'
 
